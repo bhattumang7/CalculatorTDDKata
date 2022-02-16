@@ -6,23 +6,32 @@ using System.Threading.Tasks;
 
 namespace CalculatorTDDKata
 {
+    /// <summary>
+    /// Number parser implementatino
+    /// </summary>
     public class NumberParserImpl : NumberParser
     {
         private const int IndexOfDelimiterInString = 2;
         private const int CustomDelimeterLineLastCharIndexPlusOne = 4;
+
         public List<int> ParseSumNumbers(string numbers)
         {
-            List<char> delimeters = new List<char>() { ',', '\n' };
+            List<char> delimeters = new List<char>() { ',', '\n' }; // pre popualate the list of delimiters
+
             List<int> listNumbers = new List<int>();
             if ("".Equals(numbers))
             {
                 return listNumbers;
             }
+
             if (StringHasCustomDelimiters(numbers))
             {
-                delimeters = new List<char>() { ExtractDelimiterFromString(numbers) };
+                // if a custom delimiter is present, over ride other delimiters
+                delimeters = new List<char>() { ExtractDelimiterFromString(numbers) }; 
+
                 numbers = RemoveDelimeterLineFromString(numbers);
             }
+
             if (StringContainsDelimeters(numbers, delimeters))
             {
                 string[] numberPieces = numbers.Split(delimeters.ToArray());
@@ -58,11 +67,17 @@ namespace CalculatorTDDKata
             return numbers.StartsWith("//") && numbers.Contains("\n");
         }
 
+        /// <summary>
+        /// Extrcts delimiter character from string
+        /// </summary>
         private char ExtractDelimiterFromString(string numbers)
         {
             return numbers[IndexOfDelimiterInString];
         }
 
+        /// <summary>
+        /// Removes delimeter line from the numbers string
+        /// </summary>
         private string RemoveDelimeterLineFromString(string numbers)
         {
             // If numbers is
