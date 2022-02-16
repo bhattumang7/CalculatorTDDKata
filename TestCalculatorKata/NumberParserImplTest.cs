@@ -49,5 +49,16 @@ namespace TestCalculatorKata
             Assert.AreEqual(1, lstNumbers[2]);
             Assert.AreEqual(10, lstNumbers[3]);
         }
+
+        [TestMethod]
+        public void TestSum_TestMultipleNewLineCommaSeparatedValues()
+        {
+            List<int> lstNumbers = _numberParserImpl.ParseSumNumbers("1\n2,1,10");
+            Assert.AreEqual(4, lstNumbers.Count);
+            Assert.AreEqual(1, lstNumbers[0]);
+            Assert.AreEqual(2, lstNumbers[1]);
+            Assert.AreEqual(1, lstNumbers[2]);
+            Assert.AreEqual(10, lstNumbers[3]);
+        }
     }
 }
