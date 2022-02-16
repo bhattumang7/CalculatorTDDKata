@@ -10,17 +10,18 @@ namespace CalculatorTDDKata
     {
         public List<int> ParseSumNumbers(string numbers)
         {
+            List<char> delimeters = new List<char>() { ',', '\n' };
             List<int> listNumbers = new List<int>();
             if ("".Equals(numbers))
             {
                 return listNumbers;
             }
-            if (numbers.Contains(',') || numbers.Contains('\n'))
+            if (StringContainsDelimeters(numbers, delimeters))
             {
-                string[] numberPieces = numbers.Split(',','\n');
+                string[] numberPieces = numbers.Split(',', '\n');
                 foreach (var number in numberPieces)
                 {
-                    listNumbers .Add(int.Parse(number));
+                    listNumbers.Add(int.Parse(number));
                 }
             }
             else
@@ -28,6 +29,21 @@ namespace CalculatorTDDKata
                 listNumbers.Add(int.Parse(numbers));
             }
             return listNumbers;
+        }
+
+        private bool StringContainsDelimeters(string numbers, List<char> delimeters)
+        {
+            bool contains = false;
+
+            foreach (var delimeter in delimeters)
+            {
+                if (numbers.Contains(delimeter))
+                {
+                    contains = true;
+                    break;
+                }
+            }
+            return contains;
         }
     }
 }
