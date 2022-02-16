@@ -60,5 +60,15 @@ namespace TestCalculatorKata
             Assert.AreEqual(1, lstNumbers[2]);
             Assert.AreEqual(10, lstNumbers[3]);
         }
+
+
+        [TestMethod]
+        public void TestSum_TestCustomDelimeter()
+        {
+            List<int> lstNumbers = _numberParserImpl.ParseSumNumbers("//;\n1;2");
+            Assert.AreEqual(2, lstNumbers.Count);
+            Assert.AreEqual(1, lstNumbers[0]);
+            Assert.AreEqual(2, lstNumbers[1]);
+        }
     }
 }
