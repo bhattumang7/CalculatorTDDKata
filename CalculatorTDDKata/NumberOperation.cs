@@ -10,9 +10,19 @@ namespace CalculatorTDDKata
     {
         public int Add(string numbers)
         {
-            if("".Equals(numbers))
+            if ("".Equals(numbers))
             {
                 return 0;
+            }
+            if (numbers.Contains(','))
+            {
+                string[] numberPieces = numbers.Split(',');
+                int sum = 0;
+                foreach (var number in numberPieces)
+                {
+                    sum += int.Parse(number);
+                }
+                return sum;
             }
             return int.Parse(numbers);
         }
