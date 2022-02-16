@@ -9,10 +9,15 @@ namespace CalculatorTDDKata
     public class NumberOperation
     {
         NumberParser _numberParser;
+
+        /// <summary>
+        /// Constructor to inject dependencies
+        /// </summary>
         public NumberOperation(NumberParser numberParser)
         {
             _numberParser = numberParser;
         }
+
         public int Add(string numbers)
         {
             List<int> lstNumbers = _numberParser.ParseSumNumbers(numbers);
