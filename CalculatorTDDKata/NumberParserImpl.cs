@@ -27,41 +27,24 @@ namespace CalculatorTDDKata
             if (StringHasCustomDelimiters(numbers))
             {
                 // if a custom delimiter is present, over ride other delimiters
-                delimeters = new List<char>() { ExtractDelimiterFromString(numbers) }; 
+                delimeters = new List<char>() { ExtractDelimiterFromString(numbers) };
 
                 numbers = RemoveDelimeterLineFromString(numbers);
             }
 
-            if (StringContainsDelimeters(numbers, delimeters))
+            string[] numberPieces = numbers.Split(delimeters.ToArray());
+            foreach (var number in numberPieces)
             {
-                string[] numberPieces = numbers.Split(delimeters.ToArray());
-                foreach (var number in numberPieces)
-                {
-                    listNumbers.Add(int.Parse(number));
-                }
+                listNumbers.Add(int.Parse(number));
             }
-            else
-            {
-                listNumbers.Add(int.Parse(numbers));
-            }
+
             return listNumbers;
         }
 
-        private bool StringContainsDelimeters(string numbers, List<char> delimeters)
-        {
-            bool contains = false;
 
-            foreach (var delimeter in delimeters)
-            {
-                if (numbers.Contains(delimeter))
-                {
-                    contains = true;
-                    break;
-                }
-            }
-            return contains;
-        }
-
+        /// <summary>
+        /// Method returns true if the numbers string has custom delimiter in beginnning 
+        /// </summary>
         private bool StringHasCustomDelimiters(string numbers)
         {
             return numbers.StartsWith("//") && numbers.Contains("\n");
