@@ -7,27 +7,31 @@ namespace TestCalculatorKata
     [TestClass]
     public class TestNumberOperations
     {
+        NumberOperation _numberOperation = null;
+
+        [TestInitialize]
+        public void InitializeTest()
+        {
+            _numberOperation = new NumberOperation();
+        }
         [TestMethod]
         public void TestSum_TestBlankInput()
-        {
-            NumberOperation numberOperation = new NumberOperation();
-            int sum = numberOperation.Add("");
+        {   
+            int sum = _numberOperation.Add("");
             Assert.AreEqual(0, sum);
         }
 
         [TestMethod]
         public void TestSum_TestSingleDigitInput()
         {
-            NumberOperation numberOperation = new NumberOperation();
-            int sum = numberOperation.Add("1");
+            int sum = _numberOperation.Add("1");
             Assert.AreEqual(1, sum);
         }
 
         [TestMethod]
         public void TestSum_TestCommaSeparatedValue()
         {
-            NumberOperation numberOperation = new NumberOperation();
-            int sum = numberOperation.Add("1,1");
+            int sum = _numberOperation.Add("1,1");
             Assert.AreEqual(2, sum, "One plus one should be two");
         }
 
