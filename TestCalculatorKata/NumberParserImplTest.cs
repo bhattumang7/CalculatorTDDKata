@@ -70,5 +70,12 @@ namespace TestCalculatorKata
             Assert.AreEqual(1, lstNumbers[0]);
             Assert.AreEqual(2, lstNumbers[1]);
         }
+
+        [TestMethod]
+        public void TestSum_TestCustomDelimeterCanNotBemixedWithOthers()
+        {
+            Assert.ThrowsException<Exception>( () => _numberParserImpl.ParseSumNumbers("//;\n1;2,3"));
+            
+        }
     }
 }
