@@ -23,6 +23,13 @@ namespace TestCalculatorKata
             Assert.AreEqual(1, sum);
         }
 
+        [TestMethod]
+        public void TestSum_TestCommaSeparatedValue()
+        {
+            NumberOperation numberOperation = new NumberOperation();
+            int sum = numberOperation.Add("1,1");
+            Assert.AreEqual(2, sum, "One plus one should be two");
+        }
 
     }
 }
