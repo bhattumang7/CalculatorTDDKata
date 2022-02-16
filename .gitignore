@@ -332,3 +332,17 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+TestCalculatorKata/obj/Debug/TestCalculatorKata.pdb
+TestCalculatorKata/obj/Debug/TestCalculatorKata.dll
+TestCalculatorKata/obj/Debug/TestCalculatorKata.csproj.AssemblyReference.cache
+TestCalculatorKata/bin/Debug/TestCalculatorKata.pdb
+TestCalculatorKata/bin/Debug/TestCalculatorKata.dll
+TestCalculatorKata/bin/Debug/CalculatorTDDKata.pdb
+TestCalculatorKata/bin/Debug/CalculatorTDDKata.exe
+CalculatorTDDKata/obj/Debug/CalculatorTDDKata.pdb
+CalculatorTDDKata/obj/Debug/CalculatorTDDKata.exe
+CalculatorTDDKata/obj/Debug/CalculatorTDDKata.csproj.CoreCompileInputs.cache
+CalculatorTDDKata/obj/Debug/CalculatorTDDKata.csproj.AssemblyReference.cache
+CalculatorTDDKata/bin/Debug/CalculatorTDDKata.pdb
+CalculatorTDDKata/bin/Debug/CalculatorTDDKata.exe
+.vs/CalculatorTDDKata/v16/.suo

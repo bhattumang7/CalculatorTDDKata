@@ -14,5 +14,15 @@ namespace TestCalculatorKata
             int sum = numberOperation.Add("");
             Assert.AreEqual(0, sum);
         }
+
+        [TestMethod]
+        public void TestSum_TestSingleDigitInput()
+        {
+            NumberOperation numberOperation = new NumberOperation();
+            int sum = numberOperation.Add("1");
+            Assert.AreEqual(1, sum);
+        }
+
+
     }
 }
