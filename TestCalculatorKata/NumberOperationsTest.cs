@@ -1,6 +1,8 @@
 ﻿using CalculatorTDDKata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
+using Telerik.JustMock;
 
 namespace TestCalculatorKata
 {
@@ -12,36 +14,30 @@ namespace TestCalculatorKata
         [TestInitialize]
         public void InitializeTest()
         {
-            _numberParser = new NumberParserImpl();
+            _numberParser = Mock.Create<NumberParser>();
             _numberOperation = new NumberOperation(_numberParser);
         }
         [TestMethod]
         public void TestSum_TestBlankInput()
-        {   
-            int sum = _numberOperation.Add("");
+        {
+            string input = "" ;
+            List<int> lstNumbers = new List<int>();
+            Mock.Arrange(() => _numberParser.ParseSumNumbers(input)).Returns(lstNumbers);
+            int sum = _numberOperation.Add("input");
             Assert.AreEqual(0, sum);
         }
 
         [TestMethod]
-        public void TestSum_TestSingleDigitInput()
-        {
-            int sum = _numberOperation.Add("1");
-            Assert.AreEqual(1, sum);
-        }
-
-        [TestMethod]
-        public void TestSum_TestCommaSeparatedValue()
-        {
-            int sum = _numberOperation.Add("1,1");
-            Assert.AreEqual(2, sum, "One plus one should be two");
-        }
-
-
-        [TestMethod]
         public void TestSum_TestMultipleCommaSeparatedValues()
         {
-            int sum = _numberOperation.Add("1,1,1,10");
-            Assert.AreEqual(13, sum, "One plus one plus one plus ten should be thriteen");
+            string input = "1,10,100";
+            List<int> lstNumbers = new List<int>();
+            lstNumbers.Add(1);
+            lstNumbers.Add(10);
+            lstNumbers.Add(100);
+            Mock.Arrange(() => _numberParser.ParseSumNumbers(input)).Returns(lstNumbers);
+            int sum = _numberOperation.Add(input);
+            Assert.AreEqual(111, sum);
         }
 
     }
