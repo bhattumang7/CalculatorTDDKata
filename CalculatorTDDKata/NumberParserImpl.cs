@@ -16,9 +16,14 @@ namespace CalculatorTDDKata
             {
                 return listNumbers;
             }
+            if (numbers.StartsWith("//") && numbers.Contains("\n"))
+            {
+                delimeters.Add(numbers[2]);
+                numbers = numbers.Substring(4);
+            }
             if (StringContainsDelimeters(numbers, delimeters))
             {
-                string[] numberPieces = numbers.Split(',', '\n');
+                string[] numberPieces = numbers.Split(delimeters.ToArray());
                 foreach (var number in numberPieces)
                 {
                     listNumbers.Add(int.Parse(number));
