@@ -23,7 +23,7 @@ namespace TestCalculatorKata
             string input = "";
             List<int> lstNumbers = new List<int>();
             Mock.Arrange(() => _numberParser.ParseSumNumbers(input)).Returns(lstNumbers);
-            int sum = _numberOperation.Add("input");
+            int sum = _numberOperation.Add(input);
             Assert.AreEqual(0, sum);
         }
 
