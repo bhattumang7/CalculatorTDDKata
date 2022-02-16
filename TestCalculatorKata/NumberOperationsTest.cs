@@ -20,7 +20,7 @@ namespace TestCalculatorKata
         [TestMethod]
         public void TestSum_TestBlankInput()
         {
-            string input = "" ;
+            string input = "";
             List<int> lstNumbers = new List<int>();
             Mock.Arrange(() => _numberParser.ParseSumNumbers(input)).Returns(lstNumbers);
             int sum = _numberOperation.Add("input");
@@ -40,5 +40,22 @@ namespace TestCalculatorKata
             Assert.AreEqual(111, sum);
         }
 
+
+
+        [TestMethod]
+        public void TestSum_TestNegativeValues()
+        {
+            string input = "1,10,100";
+            List<int> lstNumbers = new List<int>();
+            lstNumbers.Add(1);
+            lstNumbers.Add(10);
+            lstNumbers.Add(-5);
+            lstNumbers.Add(6);
+            lstNumbers.Add(-10);
+            Mock.Arrange(() => _numberParser.ParseSumNumbers(input)).Returns(lstNumbers);
+            var exception = Assert.ThrowsException<ArgumentException>(() => _numberOperation.Add(input));
+            Assert.IsTrue(exception.Message.Contains("-5"));
+            Assert.IsTrue(exception.Message.Contains("-10"));
+        }
     }
 }
