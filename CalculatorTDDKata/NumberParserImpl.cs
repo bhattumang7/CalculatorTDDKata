@@ -8,6 +8,7 @@ namespace CalculatorTDDKata
 {
     public class NumberParserImpl : NumberParser
     {
+        private const int IndexOfDelimiterInString = 2;
         public List<int> ParseSumNumbers(string numbers)
         {
             List<char> delimeters = new List<char>() { ',', '\n' };
@@ -16,9 +17,9 @@ namespace CalculatorTDDKata
             {
                 return listNumbers;
             }
-            if (StringHasCustomDelimeters(numbers))
+            if (StringHasCustomDelimiters(numbers))
             {
-                delimeters.Add(numbers[2]);
+                delimeters.Add(ExtractDelimiterFromString(numbers));
                 numbers = numbers.Substring(4);
             }
             if (StringContainsDelimeters(numbers, delimeters))
@@ -51,9 +52,15 @@ namespace CalculatorTDDKata
             return contains;
         }
 
-        private bool StringHasCustomDelimeters(string numbers)
+        private bool StringHasCustomDelimiters(string numbers)
         {
             return numbers.StartsWith("//") && numbers.Contains("\n");
         }
+
+        private char ExtractDelimiterFromString(string numbers)
+        {
+            return numbers[IndexOfDelimiterInString];
+        }
+
     }
 }
