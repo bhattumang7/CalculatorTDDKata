@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using CalculatorTDDKata;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace TestCalculatorKata
