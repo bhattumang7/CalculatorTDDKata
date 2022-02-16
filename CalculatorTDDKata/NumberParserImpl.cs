@@ -15,9 +15,9 @@ namespace CalculatorTDDKata
             {
                 return listNumbers;
             }
-            if (numbers.Contains(','))
+            if (numbers.Contains(',') || numbers.Contains('\n'))
             {
-                string[] numberPieces = numbers.Split(',');
+                string[] numberPieces = numbers.Split(',','\n');
                 foreach (var number in numberPieces)
                 {
                     listNumbers .Add(int.Parse(number));
