@@ -20,7 +20,7 @@ namespace CalculatorTDDKata
             }
             if (StringHasCustomDelimiters(numbers))
             {
-                delimeters.Add(ExtractDelimiterFromString(numbers));
+                delimeters = new List<char>() { ExtractDelimiterFromString(numbers) };
                 numbers = RemoveDelimeterLineFromString(numbers);
             }
             if (StringContainsDelimeters(numbers, delimeters))
