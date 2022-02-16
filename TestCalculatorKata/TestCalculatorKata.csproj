@@ -44,7 +44,8 @@
   <ItemGroup>
     <Compile Include="DoNothing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestNumberOperations.cs" />
+    <Compile Include="NumberOperationsTest.cs" />
+    <Compile Include="NumberParserImplTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CalculatorTDDKata\CalculatorTDDKata.csproj">

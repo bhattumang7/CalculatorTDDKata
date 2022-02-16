@@ -5,7 +5,7 @@ using System;
 namespace TestCalculatorKata
 {
     [TestClass]
-    public class TestNumberOperations
+    public class NumberOperationsTest
     {
         NumberOperation _numberOperation = null;
         NumberParser _numberParser = null;
