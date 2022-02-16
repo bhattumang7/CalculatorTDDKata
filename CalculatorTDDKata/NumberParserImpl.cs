@@ -21,7 +21,7 @@ namespace CalculatorTDDKata
             if (StringHasCustomDelimiters(numbers))
             {
                 delimeters.Add(ExtractDelimiterFromString(numbers));
-                numbers = RemoveDelimeterFromString(numbers);
+                numbers = RemoveDelimeterLineFromString(numbers);
             }
             if (StringContainsDelimeters(numbers, delimeters))
             {
@@ -63,7 +63,7 @@ namespace CalculatorTDDKata
             return numbers[IndexOfDelimiterInString];
         }
 
-        private string RemoveDelimeterFromString(string numbers)
+        private string RemoveDelimeterLineFromString(string numbers)
         {
             // If numbers is
             // //;\n1;2
