@@ -8,7 +8,7 @@ namespace TestCalculatorKata
     public class TestNumberOperations
     {
         [TestMethod]
-        public void TestSum()
+        public void TestSum_TestBlankInput()
         {
             NumberOperation numberOperation = new NumberOperation();
             int sum = numberOperation.Add("");
