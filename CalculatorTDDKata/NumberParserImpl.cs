@@ -16,7 +16,7 @@ namespace CalculatorTDDKata
             {
                 return listNumbers;
             }
-            if (numbers.StartsWith("//") && numbers.Contains("\n"))
+            if (StringHasCustomDelimeters(numbers))
             {
                 delimeters.Add(numbers[2]);
                 numbers = numbers.Substring(4);
@@ -49,6 +49,11 @@ namespace CalculatorTDDKata
                 }
             }
             return contains;
+        }
+
+        private bool StringHasCustomDelimeters(string numbers)
+        {
+            return numbers.StartsWith("//") && numbers.Contains("\n");
         }
     }
 }
