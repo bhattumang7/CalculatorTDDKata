@@ -10,7 +10,11 @@ namespace CalculatorTDDKata
     {
         public int Add(string numbers)
         {
-            return 0;
+            if("".Equals(numbers))
+            {
+                return 0;
+            }
+            return int.Parse(numbers);
         }
     }
 }
