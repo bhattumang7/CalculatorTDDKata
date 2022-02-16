@@ -1,0 +1,7 @@
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\bin\Debug\CalculatorTDDKata.exe.config
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\bin\Debug\CalculatorTDDKata.exe
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\bin\Debug\CalculatorTDDKata.pdb
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\obj\Debug\CalculatorTDDKata.csproj.AssemblyReference.cache
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\obj\Debug\CalculatorTDDKata.csproj.CoreCompileInputs.cache
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\obj\Debug\CalculatorTDDKata.exe
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\CalculatorTDDKata\obj\Debug\CalculatorTDDKata.pdb
