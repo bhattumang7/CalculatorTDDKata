@@ -45,7 +45,7 @@ namespace TestCalculatorKata
         [TestMethod]
         public void TestSum_TestNegativeValues()
         {
-            string input = "1,10,100";
+            string input = "1,10,-5,6,-10";
             List<int> lstNumbers = new List<int>();
             lstNumbers.Add(1);
             lstNumbers.Add(10);
