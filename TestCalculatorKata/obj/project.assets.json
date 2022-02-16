@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6": {
+      "JustMock/2022.1.119.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        }
+      },
       "MSTest.TestAdapter/2.1.2": {
         "type": "package",
         "build": {
@@ -31,6 +40,15 @@
       }
     },
     ".NETFramework,Version=v4.6/win": {
+      "JustMock/2022.1.119.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        }
+      },
       "MSTest.TestAdapter/2.1.2": {
         "type": "package",
         "build": {
@@ -60,6 +78,15 @@
       }
     },
     ".NETFramework,Version=v4.6/win-x64": {
+      "JustMock/2022.1.119.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        }
+      },
       "MSTest.TestAdapter/2.1.2": {
         "type": "package",
         "build": {
@@ -89,6 +116,15 @@
       }
     },
     ".NETFramework,Version=v4.6/win-x86": {
+      "JustMock/2022.1.119.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Telerik.JustMock.dll": {}
+        }
+      },
       "MSTest.TestAdapter/2.1.2": {
         "type": "package",
         "build": {
@@ -119,6 +155,25 @@
     }
   },
   "libraries": {
+    "JustMock/2022.1.119.1": {
+      "sha512": "5vFrYN0l59iCNhZsfM94m57TBvcsDDMp/9cBKJTBI5XVjeTx1nGo9BNeLhogp+ZQxS8w+3uh9qXu60O6hxIM5w==",
+      "type": "package",
+      "path": "justmock/2022.1.119.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LicenseAgreements/EULA.txt",
+        "LicenseAgreements/ThirdParty/NOTICES.txt",
+        "docs/README.md",
+        "images/justmock.png",
+        "justmock.2022.1.119.1.nupkg.sha512",
+        "justmock.nuspec",
+        "lib/net45/Telerik.JustMock.dll",
+        "lib/net45/Telerik.JustMock.xml",
+        "lib/netcoreapp2.0/Telerik.JustMock.dll",
+        "lib/netcoreapp2.0/Telerik.JustMock.xml"
+      ]
+    },
     "MSTest.TestAdapter/2.1.2": {
       "sha512": "SjDlWk9t9cZKqyMReioqzRkZ1n4kPIqdAAYLd1vY2rEnx16aCShhSt4uXgTN0T1lNZgWE4Ge2+KVxHgxmtQ6QQ==",
       "type": "package",
@@ -292,6 +347,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6": [
       "CalculatorTDDKata >= 1.0.0",
+      "JustMock >= 2022.1.119.1",
       "MSTest.TestAdapter >= 2.1.2",
       "MSTest.TestFramework >= 2.1.2"
     ]
@@ -333,6 +389,10 @@
     "frameworks": {
       "net46": {
         "dependencies": {
+          "JustMock": {
+            "target": "Package",
+            "version": "[2022.1.119.1, )"
+          },
           "MSTest.TestAdapter": {
             "target": "Package",
             "version": "[2.1.2, )"

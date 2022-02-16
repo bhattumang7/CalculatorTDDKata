@@ -3,9 +3,10 @@ C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\Microsoft
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\TestCalculatorKata.dll
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\TestCalculatorKata.pdb
-C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\CalculatorTDDKata.exe
-C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\Telerik.JustMock.dll
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\CalculatorTDDKata.exe
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\CalculatorTDDKata.pdb
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\bin\Debug\CalculatorTDDKata.exe.config
 C:\Users\UBHATT\Desktop\CalculatorTDDKata\TestCalculatorKata\obj\Debug\TestCalculatorKata.csproj.AssemblyReference.cache

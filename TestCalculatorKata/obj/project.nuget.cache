@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vONhb/BYE1528jvlmjw6xjyl9IlzB/j2tYbprQguupECSyBMjzgNlSe59quCuIfJos7L4bfVHzxgd0UtLS2bOA==",
+  "dgSpecHash": "hQsoq4Rz9iEMMCf4H8pAzopNfPFE3HgYfot5HYZPPW6XIPzWevL3jYb1bd8Qmq5OqEj22lAbMeAQeLL4MDjT6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\UBHATT\\Desktop\\CalculatorTDDKata\\TestCalculatorKata\\TestCalculatorKata.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\UBHATT\\.nuget\\packages\\justmock\\2022.1.119.1\\justmock.2022.1.119.1.nupkg.sha512",
     "C:\\Users\\UBHATT\\.nuget\\packages\\mstest.testadapter\\2.1.2\\mstest.testadapter.2.1.2.nupkg.sha512",
     "C:\\Users\\UBHATT\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512"
   ],

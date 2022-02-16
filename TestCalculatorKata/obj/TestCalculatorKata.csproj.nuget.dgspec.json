@@ -53,6 +53,10 @@
       "frameworks": {
         "net46": {
           "dependencies": {
+            "JustMock": {
+              "target": "Package",
+              "version": "[2022.1.119.1, )"
+            },
             "MSTest.TestAdapter": {
               "target": "Package",
               "version": "[2.1.2, )"
