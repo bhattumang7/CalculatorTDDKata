@@ -9,6 +9,7 @@ namespace CalculatorTDDKata
     public class NumberParserImpl : NumberParser
     {
         private const int IndexOfDelimiterInString = 2;
+        private const int CustomDelimeterLineLastCharIndexPlusOne = 4;
         public List<int> ParseSumNumbers(string numbers)
         {
             List<char> delimeters = new List<char>() { ',', '\n' };
@@ -20,7 +21,7 @@ namespace CalculatorTDDKata
             if (StringHasCustomDelimiters(numbers))
             {
                 delimeters.Add(ExtractDelimiterFromString(numbers));
-                numbers = numbers.Substring(4);
+                numbers = RemoveDelimeterFromString(numbers);
             }
             if (StringContainsDelimeters(numbers, delimeters))
             {
@@ -62,5 +63,12 @@ namespace CalculatorTDDKata
             return numbers[IndexOfDelimiterInString];
         }
 
+        private string RemoveDelimeterFromString(string numbers)
+        {
+            // If numbers is
+            // //;\n1;2
+            // then we remove upto \n and return rest of the string
+            return numbers.Substring(CustomDelimeterLineLastCharIndexPlusOne);
+        }
     }
 }
