@@ -8,23 +8,20 @@ namespace CalculatorTDDKata
 {
     public class NumberOperation
     {
+        NumberParser _numberParser;
+        public NumberOperation(NumberParser numberParser)
+        {
+            _numberParser = numberParser;
+        }
         public int Add(string numbers)
         {
-            if ("".Equals(numbers))
+            List<int> lstNumbers = _numberParser.ParseSumNumbers(numbers);
+            int sum = 0;
+            foreach (var item in lstNumbers)
             {
-                return 0;
+                sum += item;
             }
-            if (numbers.Contains(','))
-            {
-                string[] numberPieces = numbers.Split(',');
-                int sum = 0;
-                foreach (var number in numberPieces)
-                {
-                    sum += int.Parse(number);
-                }
-                return sum;
-            }
-            return int.Parse(numbers);
+            return sum;
         }
     }
 }

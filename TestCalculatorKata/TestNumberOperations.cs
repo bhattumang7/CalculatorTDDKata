@@ -8,11 +8,12 @@ namespace TestCalculatorKata
     public class TestNumberOperations
     {
         NumberOperation _numberOperation = null;
-
+        NumberParser _numberParser = null;
         [TestInitialize]
         public void InitializeTest()
         {
-            _numberOperation = new NumberOperation();
+            _numberParser = new NumberParserImpl();
+            _numberOperation = new NumberOperation(_numberParser);
         }
         [TestMethod]
         public void TestSum_TestBlankInput()
@@ -33,6 +34,14 @@ namespace TestCalculatorKata
         {
             int sum = _numberOperation.Add("1,1");
             Assert.AreEqual(2, sum, "One plus one should be two");
+        }
+
+
+        [TestMethod]
+        public void TestSum_TestMultipleCommaSeparatedValues()
+        {
+            int sum = _numberOperation.Add("1,1,1,10");
+            Assert.AreEqual(13, sum, "One plus one plus one plus ten should be thriteen");
         }
 
     }
